@@ -1,9 +1,14 @@
 ---
-name: sop-to-ontology
-description: Turn a school district's SOPs, how-to documents, checklists and tribal knowledge into an organizational ontology that people review in git and agents can answer from. Use when someone says "turn our SOPs into an ontology", "document how our district operates", "organizational ontology", "our agents don't know how we work", or asks what structure, vocabulary, privacy rules and interview questions to start with. Distilled from a working district ontology (hundreds of records, in use by staff and agents); the lessons, the schemas, the question bank and a validator you can run today.
+name: district-ontology
+description: Build a school district's organizational ontology (how it actually operates, policy and practice) as records people review in git and agents answer from, in the shared shape of the district-ontology-commons so it can be compared with other districts. Use when someone says "document how our district operates", "turn our SOPs into an ontology", "organizational ontology", "our agents don't know how we work", or asks what structure, vocabulary, privacy rules, harvesting method and interview questions to start with. Distilled from a working district ontology (hundreds of records, in use by staff through a review game and by agents through an export); the lessons, the schemas, the question bank and a validator you can run today.
 ---
 
-# Upgrade your SOPs into an ontology
+# Build a district ontology, in the shape of the commons
+
+This skill is the builder's half of the [district-ontology-commons](https://github.com/lukeallpress/district-ontology-commons):
+the structure, the order of work and the rules. The other half, how to harvest the truth from staff once records
+exist, is `../harvest/README.md`; the shared question bank is `../questions/`; how districts compare what they
+built is `../brawl/README.md`. Install the whole repository, not this folder alone.
 
 An SOP tells a person how to do a task. An ontology tells a person *or an agent* how the organization
 operates: what recurring work exists, what starts it, which role does it, where the evidence lands, what has
@@ -13,7 +18,8 @@ made for you.
 
 It is written for a K-12 district but nothing in it is K-12 specific. Everything here was learned building
 one district's ontology from September 2026 on; `references/` carries the reasoning, `templates/` the schemas
-and a validator, `questions/` the questions to ask. Read this file first; read a reference when you reach its step.
+and a validator, `../questions/` the questions to ask, `../harvest/` the method for asking staff. Read this file
+first; read a reference when you reach its step.
 
 ## The ten lessons
 
@@ -63,13 +69,13 @@ and a validator, `questions/` the questions to ask. Read this file first; read a
 10. **Ask people only what they can answer.** Our first staff session failed because questions were routed by
     directory title alone and technical findings were shown to non-technical staff. Route by the role the record
     names, filter out anything code-shaped or over forty words, and show one claim at a time.
-    → `references/rollout.md`
+    → `references/rollout.md`, and the full method in `../harvest/README.md`
 
 ## Doing it
 
 **Day one.** Copy the contents of `templates/` into a new private repository: the three schemas, the three
 example records, the ledger, `validate.py`. Run the validator. Write the sponsor's own role record from what they own in
-code, repositories, calendars and three months of rulings (`questions/question-bank.md`, the role section).
+code, repositories, calendars and three months of rulings (`../questions/question-bank.md`, the role section).
 
 **Week one.** Convert five existing SOPs with `references/convert-an-sop.md`: each becomes a process record, a
 role record for its actor if none exists, and a decision record for every "we always / we never" sentence.
@@ -98,18 +104,20 @@ line is how the ontology learns what it is missing.
 
 ## The question bank
 
-`questions/question-bank.md` holds the generic questions to ask any role, organized by the record field each
-one fills, and `questions/agent-intake-prompt.md` is the prompt a role holder can hand their own assistant to
-answer them from their mailbox and documents with nothing personal. The live, growing version of the bank is
-intended to be a public site we maintain; until it exists this folder is the bank.
-
-> PLACEHOLDER: the public question bank URL goes here once the site exists.
+`../questions/question-bank.md` holds the generic questions to ask any role, organized by the record field each
+one fills and by role classification, and `../questions/agent-intake-prompt.md` is the prompt a role holder can
+hand their own assistant to answer them from their mailbox and documents with nothing personal. The bank is a
+commons asset: every district adds the questions its staff could not answer, under the same headings. A public
+site that serves the bank is intended; until it exists the folder is the bank.
 
 ## What is in this folder
 
 | Path | What |
 |---|---|
-| `README.md` | the human introduction and where this came from |
+| `../README.md` | the commons charter: what this is, why, how to join |
+| `../harvest/README.md` | collecting from staff: the review game, human-friendly language, routing, intake routes, consent, measures |
+| `../brawl/README.md` | how districts' ontologies get compared; the open design question |
+| `../districts/` | one folder per contributing district |
 | `references/record-kinds.md` | the three record kinds and the ledger, field by field, and the status ladder |
 | `references/storage-and-review.md` | one record per file, schema plus validator, the export, when a database starts to pay |
 | `references/roles-not-people.md` | the person test, role keys, titles as aliases, the Ed-Fi StaffClassification vocabulary |
@@ -118,8 +126,8 @@ intended to be a public site we maintain; until it exists this folder is the ban
 | `references/rollout.md` | the order to roll it out, the staff review game, what went wrong for us and the fix |
 | `references/convert-an-sop.md` | the walkthrough from one how-to document to three records |
 | `templates/` | a copyable repository skeleton: `schema/` (the three schemas, JSON Schema 2020-12), `processes/`, `roles/`, `decisions/` (one valid example each, generic district language), `questions/LEDGER.md` (the ledger with one example row), `validate.py` (schema, key equals file name, references resolve, no identifiers, no people, no infrastructure below `internal`, ledger numbers unique) |
-| `questions/question-bank.md` | the questions, by the field they fill |
-| `questions/agent-intake-prompt.md` | the prompt a role hands its own assistant |
+| `../questions/question-bank.md` | the shared questions, by the field they fill and by role classification |
+| `../questions/agent-intake-prompt.md` | the prompt a role hands its own assistant |
 
 ## Related standards
 
