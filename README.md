@@ -40,9 +40,9 @@ Three things make that possible, and they are the three things a contributor doe
 
 ## How to join
 
-1. Read the [Discussion](https://github.com/lukeallpress/district-ontology-commons/discussions) first. The
-   opening thread, "How do we share, store and brawl ontologies across districts?", is where the shape of this
-   gets decided, and a reply there counts as joining.
+1. Read the opening Discussion first: [How do we share, store and brawl ontologies across
+   districts?](https://github.com/lukeallpress/district-ontology-commons/discussions/1) It is where the shape
+   of this gets decided, and a reply there counts as joining.
 2. Post what you have, even if it is a folder of SOPs or a spreadsheet of who-does-what. The conversion is the
    easy part; knowing what you have is the hard part.
 3. When you are ready, open a pull request that adds `districts/<your-district>/README.md` (see `CONTRIBUTING.md`).
