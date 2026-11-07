@@ -1,0 +1,5 @@
+# Raw material may carry names. It never lands in git.
+intake/
+build/
+.venv/
+__pycache__/

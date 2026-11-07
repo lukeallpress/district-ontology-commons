@@ -1,0 +1,48 @@
+key: process:five-absence-conversation
+name: Five-absence conversation
+status: drafted
+visibility: staff
+source:
+- where: the attendance follow-up SOP in the student services shared folder (the threshold, the actor, the contact-log step, the school-business exclusion)
+  kind: document
+  learned: '2026-11-01'
+  supports: [trigger, actor, steps, evidence]
+- where: the attendance dashboard's help page (which absence codes count, the Monday refresh)
+  kind: web
+  learned: '2026-11-01'
+  supports: [signal, cadence]
+last_verified: null
+purpose: Keep a student under the state's unexcused-absence threshold by talking to them early, while the pattern is still small enough to change.
+trigger:
+  kind: threshold
+  rule: a student reaches five absences in one class
+  note: the SOP does not say who owns the number five; see the ledger
+signal:
+  data: the per-class absence count in the attendance view, refreshed nightly
+  surfaced_by: the attendance dashboard, the "crossed five" list
+actor:
+- role: role:secondary-teacher
+  note: the teacher of record for the class in which the threshold was crossed
+steps:
+- check the dashboard's "crossed five" list every Monday
+- have a conversation with the student about the pattern and what would help
+- log the contact in the SIS contact log under the Attendance category
+output: a contact-log entry
+evidence:
+  location: the SIS contact log, category Attendance
+  measurable: 'yes: contact-log entries in the Attendance category per teacher per week, against students who crossed five'
+cadence: continuous during the semester; the dashboard check is weekly
+follows: null
+escalates_to: process:ten-absence-letter (not yet drafted)
+systems:
+- node: base:sis
+  mechanism: records-in
+- node: app:attendance-dashboard
+  mechanism: informs
+vendor: none
+owner: role:campus-principal (not yet drafted)
+automated: nothing; the dashboard computes the count, a person does every step
+findings:
+- The SOP gives the conversation no deadline; a student can sit on the list for weeks with no rule broken.
+- Nothing says what happens when a student crosses five in two classes the same week.
+sop: null

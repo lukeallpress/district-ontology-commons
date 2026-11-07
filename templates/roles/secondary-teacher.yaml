@@ -1,0 +1,60 @@
+key: role:secondary-teacher
+name: Classroom teacher (secondary)
+status: drafted
+visibility: staff
+source:
+- where: processes/five-absence-conversation.yaml (the Monday dashboard check and the contact-log step)
+  kind: document
+  learned: '2026-11-01'
+- where: the certified staff handbook, the section on attendance and grading duties
+  kind: document
+  learned: '2026-11-01'
+  supports: [decides, does_not_decide]
+last_verified: null
+classification: Secondary Teacher
+titles:
+- Teacher
+- Teacher - Academy
+- CTE Instructor
+reports_to: role:campus-principal (not yet drafted)
+purpose: >
+  Teach the assigned sections, keep the gradebook and attendance for each one current, and be the first adult to
+  notice and act when a student's attendance or grades start to slide.
+owns:
+  processes:
+  - process:five-absence-conversation
+  systems:
+  - base:sis
+  other:
+  - the gradebook for each assigned section
+decides:
+- the grade for each assignment and the course, within the grading policy
+- when to have the five-absence conversation within the week the student crosses the line
+does_not_decide:
+- the absence thresholds (the campus principal)
+- whether an absence is excused (the attendance office)
+cadences:
+- what: check the attendance dashboard's "crossed five" list
+  when: every Monday during the semester
+  with: nobody; the conversation is with the student
+  evidence: the SIS contact log
+- what: post grades
+  when: each grading period, by the published close date
+  with: the campus registrar
+  evidence: the posted grades in the SIS
+standing_rules:
+- School-business absences never count toward the attendance ladder (decision:school-business-absences-not-counted (not yet drafted)).
+how_to_work_with:
+  ask: Email, or the planning period; an urgent matter about a student goes to the front office, which can reach the teacher in class.
+  approve: A grade change after the close date needs the teacher's signed form, then the principal's.
+  never:
+  - ask a teacher to log a contact they did not have
+  prefers:
+  - the dashboard list over a forwarded spreadsheet
+handoff: >
+  Which students are on the "crossed five" list and have not yet been spoken to; which sections have grades not
+  yet posted; where the class's assignment calendar lives.
+open_questions:
+- Whether the five-absence conversation has a deadline anywhere (ledger row 1).
+findings:
+- The handbook describes the attendance duty in one sentence and the SOP in another; neither names the dashboard, which is how the duty is actually done.
