@@ -80,7 +80,7 @@ Everything in the role section, plus:
 
 ## The questions a district new to this asks
 
-Collected from conversations with other districts; the answers are in `references/`.
+Collected from conversations with other districts; the answers are in `../skill/references/` and `../harvest/README.md`.
 
 - What is the back-end data structure, and should it be a database? → `storage-and-review.md`
 - How do we keep staff trusting this when their email could be referenced? → `privacy.md`
@@ -89,3 +89,52 @@ Collected from conversations with other districts; the answers are in `reference
 - We have a form that asks "what is the process, who needs to know, who is the expert"; is that enough? → it fills `steps`, `actor`/`notifies` and `owner`; add `trigger`, `evidence.location` and `source` and it is a process record
 - Should we use a standard vocabulary? → `roles-not-people.md` (Ed-Fi StaffClassification for roles; nothing standard exists for processes or decisions)
 - Which format: YAML, Markdown, a database? → the format is the least important choice; `storage-and-review.md`
+
+## By role classification
+
+Headings are Ed-Fi `StaffClassification` values, so two districts add to the same list. Each holds the
+starter questions for a role of that class; the field-by-field questions above still apply. Add yours under
+the matching heading with a one-line "from <district>" where the question is specific to how you learned it.
+
+### School Administrator (principal, assistant principal)
+
+- What do you check every morning before the first bell, and where does each item come from?
+- Which decisions about a student's day do you make alone, and which go to the district office?
+- What does a week look like in the first month of school versus the last month, by cadence?
+- Who covers you when you are off campus, and what can they not decide?
+
+### LEA Administrator (district-office directors and leads)
+
+- What do you own that no one else may change, and where is that written?
+- What arrives on your desk only because nobody else knows who owns it?
+- Which standing decisions of yours would you reopen if the law, the budget or the board changed?
+- What would your replacement need on day one that is in no document?
+
+### School Counselor
+
+- What starts a schedule change, and what ends it?
+- Which deadlines do you work to that come from outside the district (testing, applications, state reporting)?
+- What do you record about a student meeting, where, and who may read it?
+
+### Secondary Teacher
+
+- What do you do at the third, fifth and tenth absence, and where is each step recorded?
+- Which grading rules are yours, which are the department's, which are the district's?
+- What do you send home, how often, and what system sends it?
+
+### Registrar, records and data roles (classification varies by district)
+
+- What arrives from another school, in what form, and what do you do with it in what order?
+- Which records may only you change, and what proves a change was made?
+- What breaks downstream when you are out for a week?
+
+### Instructional coach and curriculum roles
+
+- What is the cadence of your work with a teacher, and what does a cycle produce?
+- What do you decide about materials alone, and what needs the director?
+
+### Clerical and office staff
+
+- What do you do at the start and end of every day, and what happens if it is skipped?
+- Which forms come to you, and where does each go next?
+- Who asks you questions nobody has written the answer to?
