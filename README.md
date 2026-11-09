@@ -85,5 +85,9 @@ and Cajon Valley Union School District about how districts should structure and 
 
 ## License and contributions
 
-Use it, fork it, improve it. The most useful thing you can send back is the question your staff could not
-answer and how you resolved it; that goes in the question bank. The second most useful is your district folder.
+[MIT](LICENSE) — use it, fork it, improve it, inside a district or inside a product; keep the copyright notice
+with it. Contributions land under the same license: by opening a pull request you agree yours is licensed that
+way.
+
+The most useful thing you can send back is the question your staff could not answer and how you resolved it;
+that goes in the question bank. The second most useful is your district folder.
